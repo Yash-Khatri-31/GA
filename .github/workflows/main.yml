@@ -30,7 +30,7 @@ jobs:
       # See also: https://api.slack.com/methods/chat.postMessage#channels
         channel-id: 'C032NCAKJPR'
     # For posting a simple plain text message
-        slack-message: "Hi"
+        slack-message: "Does it Work"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     
