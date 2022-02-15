@@ -1,4 +1,6 @@
+const text = 'Hello Sir';
 
+module.exports = text;
 
 
 
