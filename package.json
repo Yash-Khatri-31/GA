@@ -1,0 +1,25 @@
+{
+  "name": "ga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yash-Khatri-31/GA.git"
+  },
+  "author": "yash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yash-Khatri-31/GA/issues"
+  },
+  "homepage": "https://github.com/Yash-Khatri-31/GA#readme",
+  "dependencies": {
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.6.0",
+    "js-yaml": "^4.1.0",
+    "ngrok": "^4.3.0"
+  }
+}
