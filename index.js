@@ -1,5 +1,3 @@
-const yaml = require('js-yaml');
-const fs = require('fs');
 
 const {WebClient} = require('@slack/web-api')
 const {createEventAdapter} = require('@slack/events-api')
@@ -11,17 +9,12 @@ const client = new WebClient('xoxb-3103804815844-3092172404727-AzWbChFBRDLyXX2dX
 
 slackEvent.on('app_mention',(event) => {
     console.log(`Message is ${event.text} `);
-
-    // let mainText = event.text;
-    // let route  = yaml.safeLoad(fs.readFileSync('./.github/workflows/main.yml', 'utf8'));
-    // route.jobs.build.steps.with.slackmessage = mainText ;
-    // console.log(mainText);
-    // console.log(route.jobs.build.steps.with.slackmessage)
-    // fs.writeFile('./.github/workflows/main.yml', yaml.safeDump(route));
-
     (async () => {
         try{
-            await client.chat.postMessage({channel:event.channel , text:event.text})
+            let count = 0;
+            const response = await client.chat.postMessage({channel:event.channel , text:event.text})
+            if(count===1) break;
+            else count++;
         }catch(error){
             console.log(error.data)
         }
