@@ -1,25 +1,25 @@
 
-name: BuyerAssistBot
+# name: BuyerAssistBot
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-  workflow_dispatch:
+#   workflow_dispatch:
 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Post to a Slack channel
-      id: slack
-      uses: slackapi/slack-github-action@v1.18.0
-      with:
-        channel-id: 'C032NCAKJPR'
-        slack-message: "I am good, how are you?"
-      env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#     steps:
+#     - name: Post to a Slack channel
+#       id: slack
+#       uses: slackapi/slack-github-action@v1.18.0
+#       with:
+#         channel-id: 'C032NCAKJPR'
+#         slack-message: "I am good, how are you?"
+#       env:
+#         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

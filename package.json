@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "add": "git add .",
-    "commit": "git commit -m \"Update\"",
+    "add": "git add .github/workflows/main.yml",
+    "addtrial": "git add .github/workflows/trial.yml",
+    "commit": "git commit --allow-empty -m \"Updating\"",
     "push": "git push",
-    "push2": "npm-run-all add commit push"
+    "push2": "npm-run-all add commit push",
+    "push3": "npm-run-all addtrial commit push"
   },
   "repository": {
     "type": "git",
