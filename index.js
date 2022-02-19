@@ -16,9 +16,11 @@ slackEvent.on('app_mention',(event) => {
     console.log(text);
 
     if(text === 'deploy'){
+        console.log('Pushing Code')
         exec('npm run push2',{cwd: 'D:/NODEJSCOURSE/GA'},(error,stdout,stderr) => {
             if(error) console.log(error)
         })
+        console.log('Done')
     }
 })
 slackEvent.on('error',console.error)
