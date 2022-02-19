@@ -6,17 +6,16 @@ on:
   pull_request:
     branches: [ main ]
 
-  workflow_dispatch:
-
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
 jobs:
-  build:
+  notify-pr-changes:
     runs-on: ubuntu-latest
-
     steps:
-    - name: SlackBot postMessage
-      uses: parkingboss/slackbot-postmessage@v1.2.0
-      with:
-        token: ${{ secrets.SLACK_BOT_TOKEN }}
-        request: '{\"channelID\":\"C032NCAKJPR\",\"text\":\"Wrok\"}'
+      - name: Notify PR changes
+        uses: GoldenspearLLC/slack-chat-postmessage@v3
+        with:
+          channel: '#response'
+          text: "GITHUB::${{ github.event_name }} -- https://github.com/example/repo#${{ github.head_ref }}"
     
