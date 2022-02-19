@@ -1,22 +1,25 @@
+
 name: BuyerAssistBot
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
-env:
-  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  workflow_dispatch:
+
 
 jobs:
-  notify-pr-changes:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Post Slack messages
+    - name: Post to a Slack channel
+      id: slack
+      uses: slackapi/slack-github-action@v1.18.0
+      with:
+        channel-id: 'C032NCAKJPR'
+        slackmessage: "Does it Work"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-      uses: abinoda/slack-action@v1.0.7
-      with:
-        args: '{\"channel\":\"C032NCAKJPR\",\"text\":\"Hello world\"}'
-    
