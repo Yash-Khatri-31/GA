@@ -13,9 +13,10 @@ jobs:
   notify-pr-changes:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify PR changes
-        uses: GoldenspearLLC/slack-chat-postmessage@v3
-        with:
-          channel: '#response'
-          text: "GITHUB::${{ github.event_name }} -- https://github.com/example/repo#${{ github.head_ref }}"
+    - name: Post Slack messages
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: abinoda/slack-action@v1.0.7
+      with:
+        args: '{\"channel\":\"C032NCAKJPR\",\"text\":\"Hello world\"}'
     
