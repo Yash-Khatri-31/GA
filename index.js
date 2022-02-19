@@ -28,14 +28,3 @@ slackEvent.on('error',console.error)
 slackEvent.start(port).then(() => {
     console.log(`listening to port ${port}`)
 });
-
-
-
-
-    // if(text === 'how are you'){
-    //     console.log('Pushing Code 2')
-    //     exec('npm run push3',{cwd: 'D:/NODEJSCOURSE/GA'},(error,stdout,stderr) => {
-    //         if(error) console.log(error)
-    //     })
-    //     console.log('Done 2')
-    // }
