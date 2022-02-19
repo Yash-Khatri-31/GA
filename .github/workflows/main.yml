@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send Slack Message
-      uses: parkingboss/slackbot-postmessage@v1
+    - name: SlackBot postMessage
+      uses: parkingboss/slackbot-postmessage@v1.2.0
       with:
         token: ${{ secrets.SLACK_BOT_TOKEN }}
         request: '{\"channel\":\"C032NCAKJPR\",\"text\":\"Wrok\"}'
