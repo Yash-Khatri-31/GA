@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add": "git add .",
+    "commit": "git commit -m \"Update\"",
+    "push": "git push",
+    "push2": "npm-run-all add commit push"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,10 @@
   "dependencies": {
     "@slack/events-api": "^3.0.1",
     "@slack/web-api": "^6.6.0",
+    "dotenv": "^16.0.0",
     "js-yaml": "^4.1.0",
     "ngrok": "^4.3.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
