@@ -25,8 +25,9 @@
     "@slack/web-api": "^6.6.0",
     "dotenv": "^16.0.0",
     "js-yaml": "^4.1.0",
-    "ngrok": "^4.3.0"
+    "ngrok": "^4.3.0",
+    "node-powershell": "^5.0.1",
+    "npm-run-all": "^4.1.5"
   },
-  "devDependencies": {},
   "keywords": []
 }
