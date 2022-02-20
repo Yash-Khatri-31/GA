@@ -3,10 +3,7 @@ name: BuyerAssistBot
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+    branches: [ master ]
   workflow_dispatch:
 
 

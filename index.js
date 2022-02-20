@@ -17,7 +17,7 @@ slackEvent.on('app_mention',(event) => {
 
     if(text === 'deploy'){
         console.log('Pushing Code')
-        exec('npm run push2',{cwd: 'D:/NODEJSCOURSE/GA'},(error,stdout,stderr) => {
+        exec(`curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token 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" https://api.github.com/repos/Yash-Khatri-31/GA/actions/workflows/main.yml/dispatches -d '{"ref":"main"}'`,{cwd: 'D:/NODEJSCOURSE/GA'},(error,stdout,stderr) => {
             if(error) console.log(error)
         })
         console.log('Done')
@@ -28,3 +28,6 @@ slackEvent.on('error',console.error)
 slackEvent.start(port).then(() => {
     console.log(`listening to port ${port}`)
 });
+
+
+// -d '{"ref":"main"}'
