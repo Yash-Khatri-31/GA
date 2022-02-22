@@ -2,8 +2,6 @@
 name: BuyerAssistBot
 
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
 
 

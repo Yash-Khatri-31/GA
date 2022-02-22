@@ -12,8 +12,7 @@
     "push2": "git push origin master",
     "push3": "npm-run-all push1 push2",
     "push4": "npm-run-all add push",
-    "push5": "npm-run-all addtrial commit push",
-    "curl": "curl -X POST -H \"Accept: application/vnd.github.v3+json\" -H \"Authorization: token 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\" https://api.github.com/repos/Yash-Khatri-31/GA/actions/workflows/main.yml/dispatches -d '{\"ref\":\"main\"}'"
+    "push5": "npm-run-all addtrial commit push"
   },
   "repository": {
     "type": "git",
